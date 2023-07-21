@@ -7,13 +7,14 @@ const AutoLoad = require('@fastify/autoload')
 module.exports.options = {}
 
 module.exports = async function (fastify, opts) {
-  // Place here your custom code!
 
-  // Do not touch the following lines
-
-  // This loads all plugins defined in plugins
-  // those should be support plugins that are reused
-  // through your application
+  fastify.register(require('@fastify/mongodb'), {
+    // force to close the mongodb connection when app stopped
+    // the default value is false
+    forceClose: true,
+    url: 'mongodb://localhost:27017',
+  })
+  
   fastify.register(AutoLoad, {
     dir: path.join(__dirname, 'plugins'),
     options: Object.assign({}, opts)

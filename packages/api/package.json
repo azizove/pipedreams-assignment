@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "tap \"test/**/*.test.js\"",
-    "start": "fastify start -l info app.js",
-    "dev": "fastify start -w -l info -P app.js",
+    "start": "npm run seed && fastify start -l info app.js",
+    "dev": "npm run seed && fastify start -w -l info -P app.js",
     "seed": "node seeds/seed.js"
   },
   "keywords": [],
@@ -20,12 +20,10 @@
     "@fastify/mongodb": "^7.0.0",
     "@fastify/sensible": "^5.0.0",
     "dotenv": "^16.3.1",
-    "faker": "^6.6.6",
     "fastify": "^4.20.0",
     "fastify-cli": "^5.7.1",
     "fastify-plugin": "^4.0.0",
-    "mongo-seeding": "^3.7.2",
-    "mongodb": "^5.7.0"
+    "mongo-seeding": "^3.7.2"
   },
   "devDependencies": {
     "tap": "^16.1.0"
