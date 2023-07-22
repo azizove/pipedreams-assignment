@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 import StaffPage from "./pages/StaffPage";
+import './styles.css';
 
 const App = () => {
   return (
