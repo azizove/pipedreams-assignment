@@ -7,7 +7,7 @@ module.exports = async function (fastify, opts) {
     return waiters
   })
   fastify.get('/:day', async function (request, reply) {
-    const day = request.params.day
+    const day = request.params.day.toLowerCase();
     const waitersCollection = fastify.mongo.client.db('staff').collection('waiters')
     const waiter = await waitersCollection.findOne({ day })
     return waiter

@@ -1,12 +1,21 @@
 import React from "react";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
+import StaffPage from "./pages/StaffPage";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      This is aziz basha
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/waiters" element={<StaffPage staffType="waiters" />} />
+          <Route path="/cooks" element={<StaffPage staffType="cooks" />} />
+          <Route path="/" element={<StaffPage staffType="waiters" />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
-}
+};
 
 export default App;
