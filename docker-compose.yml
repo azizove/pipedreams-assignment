@@ -1,0 +1,12 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./packages/api
+    ports:
+      - "3000:3000"
+  frontend:
+    build:
+      context: ./packages/web-client
+    ports:
+      - "80:80"
