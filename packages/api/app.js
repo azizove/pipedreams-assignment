@@ -9,10 +9,18 @@ module.exports.options = {}
 module.exports = async function (fastify, opts) {
 
   fastify.register(require('@fastify/mongodb'), {
-    // force to close the mongodb connection when app stopped
-    // the default value is false
     forceClose: true,
     url: 'mongodb://localhost:27017',
+  })
+
+  fastify.register(require('@fastify/cors'), (instance) => {
+    return (req, callback) => {
+      const corsOptions = {
+        origin: true
+      };
+  
+      callback(null, corsOptions)
+    }
   })
   
   fastify.register(AutoLoad, {
