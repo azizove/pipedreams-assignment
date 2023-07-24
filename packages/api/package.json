@@ -23,12 +23,12 @@
     "@fastify/swagger": "^8.8.0",
     "@fastify/swagger-ui": "^1.9.2",
     "dotenv": "^16.3.1",
-    "fastify": "^4.20.0",
     "fastify-cli": "^5.7.1",
     "fastify-plugin": "^4.0.0",
     "mongo-seeding": "^3.7.2"
   },
   "devDependencies": {
-    "tap": "^16.1.0"
+    "mongodb-memory-server": "^8.13.0",
+    "tap": "^16.3.7"
   }
 }
