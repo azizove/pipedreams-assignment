@@ -90,7 +90,6 @@ lerna-application/
       |- ... (API-specific files and folders)
     |- web-client/
       |- ... (WEB client-specific files and folders)
-  |- ... (other configuration files and shared resources)
 ```
 
 The `packages` directory contains two main packages: `api` and `web-client`. Each package has its own specific codebase and dependencies.
@@ -106,7 +105,3 @@ We welcome contributions to enhance the functionality and fix issues of this app
 5. Create a pull request (PR) to the main repository.
 
 We will review your PR and merge it if it meets the project's guidelines.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the terms of the license.
